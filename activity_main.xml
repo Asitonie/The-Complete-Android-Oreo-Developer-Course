@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="100dp"
+            android:layout_marginBottom="130dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/tableLayout">
+
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"
+                  android:foregroundGravity="center_vertical|center|center_horizontal">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/q" android:textAlignment="center"
+                    android:layout_weight="1" android:textSize="36sp"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/a1" android:layout_weight="1"
+                    android:shadowColor="@android:color/holo_green_light"
+                    android:background="@android:color/holo_green_light"
+                    android:textSize="36sp"
+                    android:gravity="fill|fill_vertical"
+                    android:textAlignment="center" android:tag="a1" android:onClick="click"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/a2" android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light" android:textAlignment="center"
+                    android:tag="a2" android:textSize="36sp" android:onClick="click"
+                    android:gravity="fill|fill_vertical"/>
+        </TableRow>
+        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:layout_weight="1">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/a3" android:layout_weight="1"
+                    android:background="@android:color/holo_blue_light" android:textAlignment="center"
+                    android:tag="a3" android:textSize="36sp" android:onClick="click"
+                    android:gravity="fill|fill_vertical"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/a4" android:layout_weight="1"
+                    android:background="@android:color/holo_red_dark" android:textAlignment="center" android:tag="a4"
+                    android:textSize="36sp" android:onClick="click" android:gravity="fill|fill_vertical"/>
+        </TableRow>
+    </TableLayout>
+    <Button
+            android:text="begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/begin"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:onClick="begin"/>
+    <TextView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:id="@+id/time" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+            app:layout_constraintVertical_bias="1.0" android:textAlignment="center" android:textSize="36sp"/>
+    <TextView
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:id="@+id/correct" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="272dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/time" android:textAlignment="center" android:textSize="36sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
